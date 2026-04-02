@@ -1,65 +1,82 @@
 body {
   margin: 0;
-  font-family: sans-serif;
-  background: #0f172a;
-  color: white;
+  font-family: Arial;
+  background: #f1f5f9;
 }
 
+/* Center screen */
 .center {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 button {
-  padding: 10px;
+  padding: 12px 18px;
   margin: 5px;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   background: #2563eb;
   color: white;
+  font-size: 16px;
 }
 
 /* Header */
 .header {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  background: #1e293b;
+  background: white;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
 }
 
 /* Posts */
-.post {
-  background: #1e293b;
-  margin: 10px;
+#posts {
   padding: 10px;
-  border-radius: 15px;
 }
 
-.post img, video {
+.post {
+  background: white;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.post img, .post video {
   width: 100%;
   border-radius: 10px;
 }
 
-audio {
+.post audio {
   width: 100%;
 }
 
-/* Modal */
-.modal {
+/* Input Box */
+#inputBox {
   position: fixed;
+  bottom: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  background: white;
+  padding: 8px;
+  border-top: 1px solid #ddd;
 }
 
-.box {
-  background: #020617;
-  padding: 20px;
-  border-radius: 15px;
-  width: 90%;
+#inputBox input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+#inputBox input[type="file"] {
+  width: 90px;
+}
+
+#inputBox button {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 18px;
+  background: #2563eb;
 }
 
 .hidden {
