@@ -1,41 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HematTech</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- MODE SELECT -->
-<div id="modeSelect" class="center">
-  <h2>HematTech</h2>
-  <button onclick="enterAdmin()">🔐 Admin Mode</button>
-  <button onclick="enterUser()">👤 User Mode</button>
+<!-- MODE -->
+<div id="mode" class="center">
+  <h1>HematTech</h1>
+  <button onclick="adminLogin()">🔐 Admin</button>
+  <button onclick="userMode()">👤 User</button>
 </div>
 
-<!-- MAIN -->
+<!-- APP -->
 <div id="app" class="hidden">
 
-  <!-- HEADER -->
   <div class="header">
-    <h3>📢 HematTech Channel</h3>
-    <button id="addBtn" onclick="openPanel()">➕</button>
+    <h2>📢 HematTech Channel</h2>
   </div>
 
   <!-- POSTS -->
   <div id="posts"></div>
 
-</div>
-
-<!-- ADMIN PANEL -->
-<div id="panel" class="modal hidden">
-  <div class="box">
-    <textarea id="caption" placeholder="Caption..."></textarea>
+  <!-- INPUT -->
+  <div id="inputBox">
     <input type="file" id="file">
-    <button onclick="publish()">Publish</button>
+    <input type="text" id="text" placeholder="Write message...">
+    <button onclick="send()">➤</button>
   </div>
+
 </div>
 
 <script src="app.js"></script>
