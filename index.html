@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>HematTech</title>
@@ -8,23 +8,31 @@
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
+<!-- MODE SELECT -->
+<div id="modeSelect" class="center">
   <h2>HematTech</h2>
-  <div>
-    <button onclick="toggleTheme()">🌗</button>
-    <button onclick="login()">🔐</button>
-  </div>
+  <button onclick="enterAdmin()">🔐 Admin Mode</button>
+  <button onclick="enterUser()">👤 User Mode</button>
 </div>
 
-<!-- POSTS -->
-<div id="posts"></div>
+<!-- MAIN -->
+<div id="app" class="hidden">
 
-<!-- ADMIN POPUP -->
-<div id="adminPanel" class="modal hidden">
-  <div class="modal-content">
-    <h3>📤 New Post</h3>
-    <textarea id="caption" placeholder="Write something..."></textarea>
+  <!-- HEADER -->
+  <div class="header">
+    <h3>📢 HematTech Channel</h3>
+    <button id="addBtn" onclick="openPanel()">➕</button>
+  </div>
+
+  <!-- POSTS -->
+  <div id="posts"></div>
+
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="panel" class="modal hidden">
+  <div class="box">
+    <textarea id="caption" placeholder="Caption..."></textarea>
     <input type="file" id="file">
     <button onclick="publish()">Publish</button>
   </div>
