@@ -8,22 +8,28 @@
 
 <body>
 
-<!-- Header -->
+<!-- HEADER -->
 <div class="header">
-  <h2>📢 HematTech</h2>
-  <button onclick="login()">🔐</button>
+  <h2>HematTech</h2>
+  <div>
+    <button onclick="toggleTheme()">🌗</button>
+    <button onclick="login()">🔐</button>
+  </div>
 </div>
 
-<!-- Posts -->
+<!-- POSTS -->
 <div id="posts"></div>
 
-<!-- Chat -->
-<div class="chat-box">
-  <div id="chat"></div>
-  <input id="msg" placeholder="Message...">
-  <button onclick="sendMsg()">➤</button>
+<!-- ADMIN POPUP -->
+<div id="adminPanel" class="modal hidden">
+  <div class="modal-content">
+    <h3>📤 New Post</h3>
+    <textarea id="caption" placeholder="Write something..."></textarea>
+    <input type="file" id="file">
+    <button onclick="publish()">Publish</button>
+  </div>
 </div>
 
 <script src="app.js"></script>
 </body>
-</html> 
+</html>
